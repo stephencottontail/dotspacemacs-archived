@@ -68,7 +68,8 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(key-chord
-									  editorconfig)
+									  editorconfig
+									  magithub)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -382,6 +383,9 @@ you should place your code here."
   (setq powerline-image-apple-rgb t)
   (setq-default flycheck-stylelintrc '"/usr/local/lib/node_modules/stylelint-config-standard/index.js")
   (setq projectile-switch-project-action 'helm-projectile)
+  (use-package magithub
+	:after magit
+	:config (magithub-feature-autoinject t))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
