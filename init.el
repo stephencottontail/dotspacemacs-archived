@@ -382,11 +382,7 @@ you should place your code here."
   (setq powerline-default-separator 'slant)
   (setq powerline-image-apple-rgb t)
   (setq-default flycheck-stylelintrc '"/usr/local/lib/node_modules/stylelint-config-standard/index.js")
-  (setq projectile-switch-project-action 'helm-projectile)
-  (use-package magithub
-	:after magit
-	:config (magithub-feature-autoinject t))
-  )
+  (setq projectile-switch-project-action 'helm-projectile))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
